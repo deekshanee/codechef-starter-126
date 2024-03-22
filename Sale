@@ -1,0 +1,39 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+    public static long solve(long arr[],int index){
+        
+        if(index>=arr.length)
+        return 0;
+        
+        return Math.max(arr[index]+solve(arr,index+1),2*arr[index]);
+    }
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	Scanner scanner = new Scanner(System.in);
+	int t = 0;
+	t = scanner.nextInt();
+	while(t>0){
+	    
+	    int n =0;
+	    n= scanner.nextInt();
+	    long sales[] = new long[n];
+	    for(int i=0;i<n;i++){
+	        sales[i] = scanner.nextLong();
+	    }
+	    
+	    long ans = solve(sales,0);
+	    System.out.println(ans);
+	    
+	    
+	    
+	    
+	    
+	    t--;
+	}
+
+	}
+}
